@@ -29,7 +29,6 @@ import org.antlr.v4.runtime.atn.PredictionMode;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 import java.util.Stack;
 

@@ -17,12 +17,11 @@
 
 package org.apache.flink.table.codesplit;
 
-import org.antlr.v4.runtime.ParserRuleContext;
-
 import org.apache.flink.annotation.Internal;
 
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.antlr.v4.runtime.atn.PredictionMode;
 

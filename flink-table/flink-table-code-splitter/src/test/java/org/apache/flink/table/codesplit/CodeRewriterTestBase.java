@@ -23,7 +23,6 @@ import org.junit.Assert;
 
 import java.io.File;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 /** Base test class for {@link CodeRewriter}. */
 public abstract class CodeRewriterTestBase<R extends CodeRewriter> {
