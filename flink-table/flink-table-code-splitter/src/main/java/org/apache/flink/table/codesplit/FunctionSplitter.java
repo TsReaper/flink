@@ -130,14 +130,13 @@ public class FunctionSplitter implements CodeRewriter {
 
             this.boolVarNames = boolVarNames;
 
-            this.classCount = 0;
+            this.classCount = -1;
         }
 
         @Override
         public Void visitClassBody(JavaParser.ClassBodyContext ctx) {
-            Void ret = visitChildren(ctx);
             classCount++;
-            return ret;
+            return visitChildren(ctx);
         }
 
         @Override
