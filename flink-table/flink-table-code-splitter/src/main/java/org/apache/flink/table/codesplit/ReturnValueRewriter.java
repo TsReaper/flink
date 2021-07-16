@@ -162,6 +162,18 @@ public class ReturnValueRewriter implements CodeRewriter {
         }
 
         @Override
+        public Void visitClassBody(JavaParser.ClassBodyContext ctx) {
+            // skip anonymous class
+            return null;
+        }
+
+        @Override
+        public Void visitLambdaBody(JavaParser.LambdaBodyContext ctx) {
+            // skip lambda
+            return null;
+        }
+
+        @Override
         public Void visitStatement(JavaParser.StatementContext ctx) {
             if (ctx.RETURN() != null) {
                 String newReturnStatement =

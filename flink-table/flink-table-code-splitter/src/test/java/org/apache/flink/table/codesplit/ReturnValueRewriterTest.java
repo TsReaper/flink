@@ -40,4 +40,9 @@ public class ReturnValueRewriterTest extends CodeRewriterTestBase<ReturnValueRew
     public void testNotRewrite() {
         runTest("TestNotRewrite");
     }
+
+    @Test
+    public void testSkipAnonymousClassAndLambda() {
+        runTest("TestSkipAnonymousClassAndLambda");
+    }
 }

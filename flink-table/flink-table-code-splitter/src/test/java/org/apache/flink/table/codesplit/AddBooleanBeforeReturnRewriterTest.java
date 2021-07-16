@@ -61,4 +61,14 @@ public class AddBooleanBeforeReturnRewriterTest
         Assert.assertEquals(1, result.size());
         Assert.assertEquals(0, result.get(0).size());
     }
+
+    @Test
+    public void testSkipAnonymousClassAndLambda() {
+        AddBoolBeforeReturnRewriter rewriter = runTest("TestSkipAnonymousClassAndLambda");
+        List<Map<String, String>> result = rewriter.getBoolVarNames();
+        Assert.assertEquals(2, result.size());
+        Assert.assertEquals(1, result.get(0).size());
+        Assert.assertEquals("codeSplitHasReturned$0", result.get(0).get("fun(String a)"));
+        Assert.assertEquals(0, result.get(1).size());
+    }
 }
